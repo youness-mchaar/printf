@@ -34,4 +34,3 @@ break;
 
 return (width);
 }
-
