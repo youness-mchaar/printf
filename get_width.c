@@ -8,17 +8,17 @@
  *
  * Return: width.
  */
-int get_width(const char *tab, int *j, va_list list)
+int get_width(const char *format, int *j, va_list list)
 {
 	int hello;
 	int width = 0;
 
-	for (hello = *i + 1; tab[hello] != '\0'; hello++)
+	for (hello = *i + 1; format[hello] != '\0'; hello++)
 	{
-		if (is_digit(tab[hello]))
+		if (is_digit(format[hello]))
 		{
 			width *= 10;
-			width += tab[hello] - '0';
+			width += format[hello] - '0';
 		}
 		else if (format[hello] == '*')
 		{
